@@ -16,14 +16,6 @@ for (const Articulo of  ListaArticulos){
     listaArticulos2 = listaArticulos2 + 'Id: '+Articulo.id + '   Nombre: '+Articulo.nombre+ '   Marca: '+Articulo.marca +'\n';
 }
 
-// respuesta = prompt('De la sig. lista de articulos'+'\n'+'\n'+listaArticulos2+'\n'+'\n'+'¿Que accion desea realizar?\n\n'+
-//         '1-Buscar por nombre\n'+
-//         '2-Eliminar un Item(debe seleccionar un id)\n'+
-//         '3-Agregar un producto\n'+
-//         '4-Modificar el nombre del producto\n'+
-//         '5-Comprar un producto y obtener stock remanente\n'+
-//         '0-Salir');
-
 // Opcion 1
 function buscarNombre(){
     const ingresaUsuario = prompt('Ingrese nombre de Articulo a buscar:');
