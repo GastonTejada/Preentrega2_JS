@@ -16,13 +16,13 @@ for (const Articulo of  ListaArticulos){
     listaArticulos2 = listaArticulos2 + 'Id: '+Articulo.id + '   Nombre: '+Articulo.nombre+ '   Marca: '+Articulo.marca +'\n';
 }
 
-respuesta = prompt('De la sig. lista de articulos'+'\n'+'\n'+listaArticulos2+'\n'+'\n'+'¿Que accion desea realizar?\n\n'+
-        '1-Buscar por nombre\n'+
-        '2-Eliminar un Item(debe seleccionar un id)\n'+
-        '3-Agregar un producto\n'+
-        '4-Modificar el nombre del producto\n'+
-        '5-Comprar un producto y obtener stock remanente\n'+
-        '0-Salir');
+// respuesta = prompt('De la sig. lista de articulos'+'\n'+'\n'+listaArticulos2+'\n'+'\n'+'¿Que accion desea realizar?\n\n'+
+//         '1-Buscar por nombre\n'+
+//         '2-Eliminar un Item(debe seleccionar un id)\n'+
+//         '3-Agregar un producto\n'+
+//         '4-Modificar el nombre del producto\n'+
+//         '5-Comprar un producto y obtener stock remanente\n'+
+//         '0-Salir');
 
 // Opcion 1
 function buscarNombre(){
@@ -115,26 +115,36 @@ function comprarProducto(){
     }
 }
 
+do{
 
-switch( respuesta ) {
-    case '1':
-        buscarNombre();                  
-        break    
-    case '2':
-        eliminaProducto();
-        break
-    case '3':
-        agregaProducto();
-        break
-    case '4':
-        modificaProducto();
-        break
-    case '5':
-        comprarProducto();
-        break
-    case '0':
-        alert('Muchas gracias por su visita');
-        break                
-    default:
-        alert('Debe indicar una opción entre 1 y 5');    
-}
+    respuesta = prompt('De la sig. lista de articulos'+'\n'+'\n'+listaArticulos2+'\n'+'\n'+'¿Que accion desea realizar?\n\n'+
+    '1-Buscar por nombre\n'+
+    '2-Eliminar un Item(debe seleccionar un id)\n'+
+    '3-Agregar un producto\n'+
+    '4-Modificar el nombre del producto\n'+
+    '5-Comprar un producto y obtener stock remanente\n'+
+    '0-Salir');
+
+    switch( respuesta ) {
+        case '1':
+            buscarNombre();                  
+            break    
+        case '2':
+            eliminaProducto();
+            break
+        case '3':
+            agregaProducto();
+            break
+        case '4':
+            modificaProducto();
+            break
+        case '5':
+            comprarProducto();
+            break
+        case '0':
+            alert('Muchas gracias por su visita');
+            break                
+        default:
+            alert('Debe indicar una opción entre 1 y 5');    
+    }
+}while(respuesta!='0')
